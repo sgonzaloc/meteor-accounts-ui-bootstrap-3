@@ -1,7 +1,7 @@
 meteor-accounts-ui-bootstrap-3
 =====================================
 
-Meteor accounts-ui styled with twitter/bootstrap 3
+Meteor accounts-ui styled with twitter/bootstrap 3 and internationalization
 
 Prerequisites
 -------------
@@ -15,6 +15,7 @@ How to add to your meteor app
 -----------------------------
 
 mrt add accounts-ui-bootstrap-3
+mrt add just-i18n
 
 How to use
 -------------

@@ -15,14 +15,14 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Reset your password</h4>
+            <h4 class="modal-title">{{i18n "LOGIN.RESET_YOUR_PASSWORD"}}</h4>
           </div>
           <div class="modal-body">
             <input id="reset-password-new-password" class="form-control" type="password" placeholder="New Password"/>
             {{> _loginButtonsMessages}}
           </div>
           <div class="modal-footer">
-            <a class="btn btn-default" id="login-buttons-cancel-reset-password">Close</a>
+            <a class="btn btn-default" id="login-buttons-cancel-reset-password">{{i18n "LOGIN.ClOSE"}}</a>
             <button class="btn btn-primary" id="login-buttons-reset-password-button">
               Set password
             </button>
@@ -40,16 +40,17 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Choose a password</h4>
+            <h4 class="modal-title">{{i18n "LOGIN.CHOOSE_A_PASSWORD"}}</h4>
           </div>
           <div class="modal-body">
-            <input id="enroll-account-password" class="form-control" type="password" placeholder="New Password" />
+            <input id="enroll-account-password" class="form-control" type="password"
+                   placeholder='{{i18n "LOGIN.NEW_PASSWORD"}}' />
             {{> _loginButtonsMessages}}
           </div>
           <div class="modal-footer">
-            <a class="btn btn-default" id="login-buttons-cancel-enroll-account-button">Close</a>
+            <a class="btn btn-default" id="login-buttons-cancel-enroll-account-button">{{i18n "LOGIN.ClOSE"}}</a>
             <button class="btn btn-primary" id="login-buttons-enroll-account-button">
-              Set password
+                {{i18n "LOGIN.SET_A_PASSWORD"}}
             </button>
           </div>
         </div><!-- /.modal-content -->
@@ -61,7 +62,7 @@
 <template name="_justVerifiedEmailDialog">
   {{#if visible}}
     <div class="accounts-dialog accounts-centered-dialog">
-      Email verified
+        {{i18n "LOGIN.EMAIL_VERIFIED"}}
       <div class="login-button" id="just-verified-dismiss-button">Dismiss</div>
     </div>
   {{/if}}

@@ -3,7 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-  api.use(['session', 'handlebars', 'accounts-password','stylus', 'accounts-base', 'underscore', 'templating'], 'client');
+  api.use(['session', 'handlebars', 'accounts-password','stylus', 'accounts-base', 'underscore', 'templating', 'just-i18n'], 'client');
 
   api.add_files([
     'accounts_ui.js',
@@ -22,7 +22,9 @@ Package.on_use(function (api) {
     'login_buttons_single.js',
     'login_buttons_dropdown.js',
     'login_buttons_dialogs.js',
-    'accounts_ui.styl'], 'client');
+    'accounts_ui.styl',
+    'i18n/en-US.js',
+    'i18n/es-AR.js'], 'client');
 });
 
 Package.on_test(function (api) {

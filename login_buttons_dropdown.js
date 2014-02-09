@@ -209,7 +209,7 @@
     Template._loginButtonsLoggedOutPasswordService.fields = function() {
         var loginFields = [{
             fieldName: 'username-or-email',
-            fieldLabel: 'Username or Email',
+            fieldLabel: i18n("LOGIN.USERNAME_OR_EMAIL"),
             visible: function() {
                 return _.contains(
                     ["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL"],
@@ -217,20 +217,20 @@
             }
         }, {
             fieldName: 'username',
-            fieldLabel: 'Username',
+            fieldLabel: i18n("LOGIN.USERNAME"),
             visible: function() {
                 return Accounts.ui._passwordSignupFields() === "USERNAME_ONLY";
             }
         }, {
             fieldName: 'email',
-            fieldLabel: 'Email',
+            fieldLabel: i18n("LOGIN.EMAIL"),
             inputType: 'email',
             visible: function() {
                 return Accounts.ui._passwordSignupFields() === "EMAIL_ONLY";
             }
         }, {
             fieldName: 'password',
-            fieldLabel: 'Password',
+            fieldLabel: i18n("LOGIN.PASSWORD"),
             inputType: 'password',
             visible: function() {
                 return true;
@@ -239,7 +239,7 @@
 
         var signupFields = [{
             fieldName: 'username',
-            fieldLabel: 'Username',
+            fieldLabel: i18n("LOGIN.USERNAME"),
             visible: function() {
                 return _.contains(
                     ["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL", "USERNAME_ONLY"],
@@ -247,7 +247,7 @@
             }
         }, {
             fieldName: 'email',
-            fieldLabel: 'Email',
+            fieldLabel: i18n("LOGIN.EMAIL"),
             inputType: 'email',
             visible: function() {
                 return _.contains(
@@ -256,21 +256,21 @@
             }
         }, {
             fieldName: 'email',
-            fieldLabel: 'Email (optional)',
+            fieldLabel: i18n("LOGIN.OPTIONAL_EMAIL"),
             inputType: 'email',
             visible: function() {
                 return Accounts.ui._passwordSignupFields() === "USERNAME_AND_OPTIONAL_EMAIL";
             }
         }, {
             fieldName: 'password',
-            fieldLabel: 'Password',
+            fieldLabel: i18n("LOGIN.PASSWORD"),
             inputType: 'password',
             visible: function() {
                 return true;
             }
         }, {
             fieldName: 'password-again',
-            fieldLabel: 'Password (again)',
+            fieldLabel: i18n("LOGIN.PASSWORD_CONFIRM"),
             inputType: 'password',
             visible: function() {
                 // No need to make users double-enter their password if
@@ -332,21 +332,21 @@
     Template._loginButtonsChangePassword.fields = function() {
         return [{
             fieldName: 'old-password',
-            fieldLabel: 'Current Password',
+            fieldLabel: i18n("LOGIN.CURRENT_PASSWORD"),
             inputType: 'password',
             visible: function() {
                 return true;
             }
         }, {
             fieldName: 'password',
-            fieldLabel: 'New Password',
+            fieldLabel: i18n("LOGIN.NEW_PASSWORD"),
             inputType: 'password',
             visible: function() {
                 return true;
             }
         }, {
             fieldName: 'password-again',
-            fieldLabel: 'New Password (again)',
+            fieldLabel: i18n("LOGIN.NEW_PASSWORD_AGAIN"),
             inputType: 'password',
             visible: function() {
                 // No need to make users double-enter their password if
